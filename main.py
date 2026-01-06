@@ -7,7 +7,7 @@ app = FastAPI()
 # Allow frontend from Vercel
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # replace with Vercel URL later
+    allow_origins=["https://frontend-test-phi-seven.vercel.app/"],  # replace with Vercel URL later
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -38,3 +38,4 @@ def create_user(name: str):
     cursor.close()
     conn.close()
     return {"message": "User created"}
+
